@@ -1,0 +1,765 @@
+---
+title: "APPLIED STATISTICS"
+author: "Ravi Mummigatti"
+date: "05/15/2021"
+output:
+  pdf_document:
+    toc: yes
+  word_document:
+    toc: yes
+  html_document:
+    toc: yes
+    theme: flatly
+    highlight: tango
+    code_folding: show
+---
+
+# Overview of Statistics
+
+**Statistics**
+
+The art and science of answering questions and exploring ideas through the processes of gathering data, describing data, and making generalizations about a population on the basis of a smaller sample.
+
+**Examples**
+
+**Choosing a Medication**
+
+Your doctor gives you the option to choose one of two different medications. She provides you with research studies comparing the two medications. How can you use those research studies to inform your decision?
+
+**School Curriculum**
+
+Your child's school is selecting a new science curriculum. The administration has narrowed it down to three different curricula and is asking parents to vote. What information would you ask for to inform your vote?
+
+**Driving to Work**
+
+There are two routes that you could take to get to work in the morning. If you go through town, it usually takes between 6 and 14 minutes, depending on the traffic and red lights. If you take the interstate, it consistently takes 10 minutes. Which route will you take to work this morning?
+
+**Marketing Decisions**
+
+Your company has put you in charge of making a decision between two marketing campaigns. How can you design a research study to collect data to inform your decision?
+
+# Sample and Statistic
+
+Population : Any large collection of objects or individuals, such as Americans, students, or trees about which information is desired
+
+Parameter : Any summary number, like an average or percentage, that describes the entire population
+
+The population mean $\mu$ (the Greek letter "mu") and the population proportion ***p*** are two different population parameters.
+
+We might be interested in learning about the average weight of all middle-aged female Americans. The population consists of all middle-aged female Americans, and the parameter is $\mu$
+
+We might be interested in learning about the proportion of likely American voters approving of the president's job performance. The population comprises all likely American voters, and the parameter is ***p***
+
+Sample : is a representative group drawn from the population
+
+Statistic : any summary number, like an average or percentage, that describes the sample
+
+Because samples are manageable in size, we can determine the actual value of **any** statistic. [*We use the known value of the sample statistic to learn about the unknown value of the population parameter.*]{.ul}
+
+Techniques of describing data in ways to capture the essence of the information in the data are called **descriptive statistics**. For example, the sample mean is a descriptive statistic. To draw conclusions from data about the population is called **inferential statistics**.
+
+# Collecting Data
+
+## Methods of Data Collection
+
+Collecting data is an important first step in statistical analysis. The goal of statistics is to make inferences about a population based on a sample. How we collect the data is important. If the sample is not representative of the whole population, we cannot make inferences about the population from that sample.
+
+The following are a few frequently used methods for collecting data:
+
+-   **Personal Interview** : People usually respond when asked by a person but their answers may be influenced by the interviewer.
+
+-   **Telephone Interview :** Cost-effective but need to keep it short since respondents tend to be impatient.
+
+-   **Self-Administered Questionnaires :** Cost-effective but the response rate is lower and the respondents may be a biased sample.
+
+-   **Direct Observation :** For certain quantities of interest, one may be able to measure it from the sample.
+
+-   **Web-Based Survey :** Can only target the population who uses the web.
+
+## Variables
+
+There may be many variables in a study. The variables may play different roles in the study. Variables can be classified as either explanatory or response variables.
+
+Variable : A variable is any characteristic, number, or quantity that can be measured, counted, or observed for record.
+
+Response Variable : Variable that about which the researcher is posing the question. May also be called the outcome or the dependent variable.
+
+Explanatory Variable : Variables that serve to explain changes in the response. They may also be called the predictor or independent variables.
+
+# Classifying Data
+
+Distinguishing between the different types of variables is a basic and integral part of applied statistics. The methods to analyze these data are very different and therefore it is important to make the distinction. Generally, variables will come in two varieties; categorical and quantitative.
+
+1.  Categorical variables group observations into separate categories that can be ordered or un-ordered.
+
+2.  Quantitative variables on the other hand are variables expressed numerically, whether as a count or measurement
+
+**Quantitative Variables**
+
+We can think of quantitative variables as any information about an observation that can only be described with numbers. Quantitative variables are generally counts or measurements of something (eg., number of points earned in a game or height).There are two types of quantitative variables; discrete and continuous, and they both help to serve different functions in a dataset.
+
+**Discrete Variables**\
+Discrete quantitative variables are numeric values that represent counts and can only take on integer values. They represent whole units that can not be broken down into smaller pieces, and as such cannot be meaningfully expressed with decimals or fractions. Examples of discrete variables are the number of children in a person's family or the number of coin flips a person makes.
+
+**Continuous Variables** Continuous quantitative variables are numeric measurements that can be expressed with decimal precision. Theoretically, continuous variables can take on infinitely many values within a given range. Examples of continuous variables are length, weight, and age which can all be described with decimal values.
+
+*Sometimes the line between discrete and continuous variables can be a bit blurry. For example, age with decimal values is a continuous variable, but age IN CLOSEST WHOLE YEARS by definition is discrete. The precision with which a quantitative variable is recorded can also determine how we classify the variable*
+
+**Categorical Variables**
+
+Categorical variables differ from quantitative variables in that they focus on the different ways data can be grouped rather than counted or measured. With categorical variables, we want to understand how the observations in our dataset can be grouped and separated from one another based on their attributes.There are two types of categorical variables : Ordinal and Nominal.
+
+**Ordinal Variables**\
+*When the groupings of a categorical variable have a specific order or ranking , it is an ordinal variable.*\
+Suppose there was a variable containing responses to the question "Rate your agreement with the statement: The minimum age to drive should be lowered." The response options are "strongly disagree", "disagree", "neutral", "agree", and "strongly agree".Because we can see an order where "strongly disagree" \< "disagree " \< "neutral" \< "agree" \< "strongly agree" in relation to agreement, we consider the variable to be ordinal
+
+**Nominal Variables**\
+*If there is no apparent order/ranking to the categories of a categorical variable, we refer to to it as a nominal variable.*\
+Nominal categorical variables are those variables with two or more categories that do not have any relational order. Examples of nominal categories could be states in the U.S., brands of computers, or ethnicities. Notice how for each of these variables, there is no intrinsic ordering that distinguishes a category as greater than or less than another category.\
+*The number of possible values for a nominal variable can be quite large. It's even possible that a nominal categorical variable will take on a unique value for every observation in a dataset, like in the case of unique identifiers such as name or email_address.*
+
+**Binary Variables**\
+*Binary or dichotomous variables are a special kind of nominal variable that have only two categories.*\
+Because there are only two possible values for binary variables, they are mutually exclusive to one another. We can imagine a variable that describes if a picture contains a cat or a dog as a binary variable. In this case, if the picture is not a dog, it must be a cat, and vice versa. Binary variables can also be described with numbers similar to bits with 0 or 1 values. Likewise you may find binary variables containing boolean values of True or False.
+
+[**Reference Data**]{.ul}
+
+The market research team at AdRight is assigned the task to identify the profile of the typical customer for each treadmill product offered by CardioGood Fitness. The market research team decides to investigate whether there are differences across the product lines with respect to customer characteristics. The team decides to collect data on individuals who purchased a treadmill at a CardioGood Fitness retail store during the prior three months. The data are stored in the CardioGoodFitness.csv file.
+
+The team identifies the following customer variables to study:
+
+1.  product purchased, TM195, TM498, or TM798;
+2.  gender : Male / Female
+3.  age : in years;
+4.  education, in years;
+5.  relationship status : single or partnered;
+6.  annual household income : In \$
+7.  average number of times the customer plans to use the treadmill each week;
+8.  average number of miles the customer expects to walk/run each week;
+9.  self-rated fitness on an 1-to-5 scale, where 1 is poor shape and 5 is excellent shape.
+
+# Summarizing Qualitative Data
+
+Once we determine that a variable is Qualitative (or Categorical), we need tools to summarize the data. We can summarize the data by using frequencies and by graphing the data.
+
+Descriptive statistics are the first pieces of information used to understand and represent a dataset. The goal, in essence, is to describe the main features of numerical and categorical information with simple summaries. These summaries can be presented with a single numeric measure, using summary tables, or via graphical representation.
+
+Here, we will review the most common forms of descriptive statistics for categorical data.
+
+[***The best way to summarize categorical data is to use frequencies and percentages like in the table.***]{.ul}
+
+**Load the packages required for descriptive statistical analysis**
+
+```{r message=FALSE , warning=FALSE}
+library(readxl)
+library(tidyverse)
+library(knitr)
+```
+
+**Read the data**
+
+```{r message=FALSE , warning=FALSE}
+cardi_good_fitness <- read_csv("cardi_good_fitness.csv")
+head(cardi_good_fitness)
+```
+
+```{r warning=FALSE , message=FALSE}
+glimpse(cardi_good_fitness)
+```
+
+## Contingency table
+
+In statistics, a **contingency table** (also known as a **cross tabulation** or **crosstab**) is a type of table in a matrix format that displays the (multivariate) frequency distribution of the variables. They are heavily used in survey research, business intelligence, engineering, and scientific research. They provide a basic picture of the interrelation between two variables and can help find interactions between them. The term *contingency table* was first used by [Karl Pearson](https://en.wikipedia.org/wiki/Karl_Pearson "Karl Pearson") in "On the Theory of Contingency and Its Relation to Association and Normal Correlation",^[[1]](https://en.wikipedia.org/wiki/Contingency_table#cite_note-1)^ part of the [*Drapers' Company*](https://en.wikipedia.org/wiki/Worshipful_Company_of_Drapers "Worshipful Company of Drapers") *Research Memoirs Biometric Series I* published in 1904. To produce contingency tables which calculate counts for each combination of categorical variables we can use R's `table()` function. For instance, we may want to get the total count of female and male customers.
+
+```{r}
+# counts for gender categories
+table(cardi_good_fitness$Gender)
+```
+
+If we want to understand the number of products purchased by males and females we can produce a cross classification table:
+
+```{r}
+# cross classication counts for product by gender
+table(cardi_good_fitness$Product , cardi_good_fitness$Gender)
+```
+
+## Proportions
+
+We can also produce contingency tables that present the proportions (percentages) of each category or combination of categories. To do this we simply feed the frequency tables produced by `table()` to the `prop.table()` function
+
+```{r}
+# percentages of gender categories
+table2 <- table(cardi_good_fitness$Gender)
+round(prop.table(table2),2)
+```
+
+```{r}
+# percentages for products by gender
+table3 <- table(cardi_good_fitness$Product , cardi_good_fitness$Gender)
+round(prop.table(table3),2)
+```
+
+## Visualizing Qualitative Variable
+
+Bar charts are most often used to visualize categorical variables **Gender Distribution**
+
+```{r out.width = "50%"}
+g = ggplot(data = cardi_good_fitness , 
+           mapping = aes(x = Gender)) +
+    geom_bar(aes(fill = Gender))
+
+g
+```
+
+**Distribution of Product by Gender**
+
+```{r out.width = "50%"}
+g <- ggplot(data = cardi_good_fitness , 
+            mapping = aes(x = Gender , color = Product)) +
+    geom_bar( aes(fill = Product) , position = 'dodge')
+g
+                
+```
+
+# Summarizing Quantitative Data
+
+Let us first talk about descriptive measures of quantitative data.
+
+Numerical summaries are useful when we have a large amount of data and want to condense it down to a few numbers that provide insights into an entire dataset.Describing numerical data involves the calculation of various measures such as the measure of center, the measure of variability, percentiles and also the construction of tables & graphs...Key features of Numerical data include :
+
+-   **Central Tendency**[:](http://uc-r.github.io/descriptives_numeric#central) What are the most typical values?
+
+-   **Variability**: How do the values vary?
+
+-   **Shape**: Are the values symmetrically or asymmetrically distributed?
+
+-   **Outliers**: Are there values that represent abnormalities in the data?
+
+## Measures of Central Tendency
+
+### Mean-Average
+
+Finding the center of a dataset is one of the most common ways to summarize statistical findings. Often, people communicate the center of data using words like, on average, usually, or often.
+
+**The mean, often referred to as the average, is a way to measure the center of a dataset.**
+
+### Median-Center
+
+The formal definition for the median of a dataset is:\
+**The value that, assuming the dataset is ordered from smallest to largest, falls in the middle. If there are an even number of values in a dataset, you either report both of the middle two values or their average.**
+
+***Note on Odd or Even Sample Sizes*** : If the sample size is an odd number then the location point will produce a median that is an observed value. If the sample size is an even number, then the location will require one to take the mean of two numbers to calculate the median. The result may or may not be an observed value as the example below illustrates.
+
+### Mode : Most Common
+
+The formal definition for the mode of a dataset is:\
+**The most frequently occurring observation in the dataset.**\
+A dataset can have multiple modes if there is more than one value with the same maximum frequency.
+
+**Mean Age of Product Users : Use the mean() function from base R**
+
+```{r}
+mean(cardi_good_fitness$Age)
+```
+
+**Median Income of Product Users : Use the median() function from base R**
+
+```{r}
+median(cardi_good_fitness$Income)
+```
+
+**Most Common Product(Mode) : Create a user-defined function to calculate mode**
+
+There is not a built in function to compute the mode of a variable^[1](http://uc-r.github.io/descriptives_numeric#fn:mode)^. However, we can create a function that takes the vector as an input and gives the mode value as an output:
+
+```{r}
+# function to calculate most frequent value
+get_mode <- function(v) {
+        unique_value <- unique(v)
+        unique_value[which.max(tabulate(match(v, unique_value)))]
+}
+
+# tabulate the product counts
+table(cardi_good_fitness$Product)
+
+# get most common education
+get_mode(cardi_good_fitness$Product)
+```
+
+We have a handy statistical summary function to calculate summary statistics of all columns
+
+```{r}
+summary(cardi_good_fitness)
+    
+```
+
+### Effects of Outliers
+
+One shortcoming of the mean is that means are easily affected by extreme values. Measures that are not that affected by extreme values are called **resistant**. Measures that are affected by extreme values are called **sensitive**.
+
+The mean is a sensitive measure (or sensitive statistic) and the median is a resistant measure (or resistant statistic).
+
+**data \< Q1 − 1.5 × IQR or data \> Q3 + 1.5 × IQR are considered as "Outliers"Statistical Summary of Income**
+
+```{r}
+summary(cardi_good_fitness$Income)
+```
+
+Least : \$29K , Highest : \$104K , Mean : \$53K , Median : \$51K.... Here the maximum income is pulling the mean higher.
+
+**Comparison of Mean-Median-Mode**
+
+| [Mean]{.ul}                                                                     | [Median]{.ul}                                                                           | [Mode]{.ul}                                                                                       |
+|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| Defined as the arithmetic average of all observations in the data set           | Defined as the middle value in the data set arranged in ascending or descending order.  | Defined as the most frequently occurring value in the distribution; it has the largest frequency. |
+| Requires measurement on all observations.                                       | Does not require measurement on all observations                                        | Does not require measurement on all observations                                                  |
+| Affected by extreme values.                                                     | Not affected by extreme values.                                                         | Not affected by extreme values.                                                                   |
+| Can be treated algebraically. That is, Means of several groups can be combined. | Cannot be treated algebraically. That is, Medians of several groups cannot be combined. | Cannot be treated algebraically. That is, Medians of several groups cannot be combined.           |
+
+## Shape
+
+The shape of the data helps us to determine the most appropriate measure of central tendency. The three most important descriptions of shape are Symmetric, Left-skewed, and Right-skewed. Skewness is a measure of the degree of asymmetry of the distribution.
+
+**Symmetrical : Mean=Median=Mode**
+
+**Left-Skewed : Mean \< Median with "Long Left Tail"**
+
+**Right-Skewed : Mean \> Median with "Long Right Tail"**
+
+## Measures of Position
+
+While measures of central tendency are important, they do not tell the whole story. There are two other types of measures, measures of position and variability, that help paint a more concise picture of what is going on in the data.
+
+Measures of position give a range where a certain percentage of the data fall. The measures we consider here are percentiles and quartiles.
+
+Percentiles : The p^th^ percentile of the data set is a measurement such that after the data are ordered from smallest to largest, at most, p% of the data are at or below this value and at most, (100 - p)% at or above it.
+
+A common application of percentiles is their use in determining passing or failure cutoffs for standardized exams such as the GRE. If you have a 95th percentile score then you are at or above 95% of all test takers.
+
+-   The lower quartile (Q1) is the 25th percentile of the data distribution (25% of data points lie \< Q1)
+
+-   The median (Q2) is the 50th percentile of the data distribution (50% of the data points lie \< Q2)
+
+-   The upper quartile (Q3) is the 75th percentile of the data distribution (75% of data points lie \< Q3)
+
+## **The Five-Number Summary:**
+
+A helpful summary of the data is called the five number summary. The five number summary consists of five values:
+
+1.  The minimum
+
+2.  The lower quartile, Q1
+
+3.  The median (also known as Q2)
+
+4.  The upper quartile, Q3
+
+5.  The maximum
+
+```{r}
+# 5 number summary
+summary(cardi_good_fitness$Age)
+```
+
+```{r}
+# interquartiel range
+IQR(cardi_good_fitness$Age)
+```
+
+Minimum Age : 18 Years ; Maximum Age : 50 Years ; Median Age : 26 Years ; Q3 : 33 Years , Q1 : 24 Years
+
+Mean \> Median -- Right Skewed Distribution
+
+## Measures of Variability
+
+The central tendencies give you a sense of the most typical values but do not provide you with information on the variability of the values. Variability can be summarized in different ways, each providing you unique understanding of how the values are spread out.
+
+There are many ways to describe variability or spread including:
+
+-   Range
+
+-   Interquartile range (IQR)
+
+-   Variance and Standard Deviation
+
+-   Coefficient of Variation (two or more groups)
+
+------------------------------------------------------------------------
+
+[**Range**]{.ul} :The range is the difference in the maximum and minimum values of a data set. The range is easy to calculate but it is very much affected by extreme values.
+
+***Range = Maximum - Minimum***
+
+[**Interquartile Range (IQR**]{.ul}**)** : The **interquartile range** is the difference between upper & lower quartiles , denoted as **IQR**. The *IQR* is not affected by extreme values. It is thus a resistant measure of variability.
+
+***IQR = Q3 (75th Percentile) - Q1 (25th Percentile)***
+
+[**Variance(s2)**]{.ul} : The average average squared distance from each data point to the data mean.Higher variance more spread out the data is.
+
+[**Standard Deviation (s)**]{.ul} **:** Since the formula for variance includes squaring the difference between the data and the mean.This result is hard to interpret in context with the mean or the data because their units are different. This is where the statistic standard deviation is useful...SD squares distances, penalizing longer distances more than shorter ones.
+
+**Standard deviation is computed by taking the square root of the variance.**
+
+[**Coefficient of Variation (CV)**]{.ul} : Range, IQR, Variance and Standard Deviation are measures we can calculate from one quantitative variable e.g. height, weight.How can we compare dispersion (i.e. variability) of data from two or more distinct populations that have vastly different means?
+
+A popular statistic to use in such situations i.e. comparing the variability between two or more distinct populations is the ***Coefficient of Variation*** **or CV**. This is a unit-free statistic and one where the higher the value the greater the dispersion.
+
+```{r}
+# variance in age
+var(cardi_good_fitness$Age)
+```
+
+```{r}
+# standard deviation of age
+sd(cardi_good_fitness$Age)
+```
+
+Comparing the Variability in Age & Income of various tread-mill users
+
+```{r}
+# compute the CV for each group
+cardi_good_fitness %>%
+    group_by(Product) %>%
+    summarize(CV_Age    = (sd(Age) / mean(Age)) , 
+              CV_Income = (sd(Income) / mean(Income))) %>%
+    ungroup()
+```
+
+***TM195 has the Largest Variation in mean user age while TM798 has the Largest Variation in mean user income***
+
+## Visualizing Quantitative Variables
+
+### Histogram
+
+If there are many data points and we would like to see the distribution of the data, we can represent the data by a **frequency histogram** or a **relative frequency histogram**.
+
+Histograms are the most common type of chart for showing the distribution of a numerical variable. Histograms display a 1D distribution by dividing into bins and counting the number of observations in each bin. Whereas the previously discussed summary measures - mean, median, standard deviation, skewness - describes only one aspect of a numerical variable, a histogram provides the complete picture by illustrating the center of the distribution, the variability, skewness, and other aspects in one convenient chart
+
+**Income Distribution**
+
+```{r}
+summary(cardi_good_fitness$Income)
+```
+
+```{r out.width = "50%"}
+g = ggplot(data = cardi_good_fitness , 
+           mapping = aes(Income)) +
+    geom_histogram(colour = "black", fill = "blue") +
+    scale_x_log10(labels = scales::dollar) + # x axis log & $$ labels
+    geom_vline(aes(xintercept = mean(Income)), 
+                   color = "red", linetype = "dashed") 
+
+g
+```
+
+```{r}
+# Histogram with 10 Bins
+g = ggplot(data = cardi_good_fitness , 
+           mapping = aes(Income)) +
+    geom_histogram(binwidth = 10000 , colour = "black", fill = "blue") +
+    scale_x_continuous(labels = scales::dollar)+
+    geom_vline(aes(xintercept = mean(Income)), 
+                   color = "red", linetype = "dashed") 
+
+g
+```
+
+### Boxplots
+
+Boxplots are an alternative way to illustrate the distribution of a variable and is a concise way to illustrate the standard quantiles, shape, and outliers of data.
+
+As the generic diagram indicates, the box itself extends, left to right, from the 1st quartile to the 3rd quartile. This means that it contains the middle half of the data. The line inside the box is positioned at the median.
+
+The lines (whiskers) coming out either side of the box extend to 1.5 interquartlie ranges (IQRs) from the quartlies. These generally include most of the data outside the box.
+
+More distant values, called outliers, are denoted separately by individual points.
+
+**Potential outliers** are observations that lie outside the lower and upper limits. (these are the Whiskers)
+
+Lower limit = *Q*1 - 1.5 \* *IQR*
+
+Upper limit = *Q*3 +1.5 \* *IQR*
+
+**Adjacent values** are the most extreme values that are not potential outliers.
+
+**Income Distribution**
+
+```{r}
+g = ggplot(data = cardi_good_fitness , 
+           mapping = aes(x = Income)) +
+    geom_boxplot() +
+    scale_x_continuous(labels = scales::dollar)
+g
+```
+
+*Income has outliers \> \$80K...*
+
+**Income Distribution by Gender**
+
+```{r}
+g <- ggplot(data = cardi_good_fitness , 
+            mapping = aes(x = Gender , y = Income)) +
+    geom_boxplot(outlier.colour = 'red') +
+    scale_y_continuous(labels = scales::dollar)
+    
+g
+```
+
+Median Income of Males is \> Median Income of Females
+
+Higher number of outliers in Male Income than Female Income
+
+**Average Miles Distribution by Gender**
+
+```{r}
+g <- ggplot(data = cardi_good_fitness , 
+            mapping = aes(x = Gender , y = Miles)) +
+    geom_boxplot(outlier.colour = 'red')
+    
+g
+```
+
+Median Miles of Males is \> Median Miles of Females
+
+Higher number of outliers in Female Miles than Males
+
+# Practice On Actual data Sets :
+
+## 1 : Mean and Median
+
+In this chapter, you'll be working with the [2018 Food Carbon Footprint Index](https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018) from nu3. The `food_consumption` dataset contains information about the kilograms of food consumed per person per year in each country in each food category (`consumption`) as well as information about the carbon footprint of that food category (`co2_emissions`) measured in kilograms of carbon dioxide, or CO, per person per year in each country.
+
+In this exercise, we compute measures of center to compare food consumption in the US and Belgium using `dplyr` skills.
+
+**Exercise 1 :**
+
+-   Create two data frames: one that holds the rows of `food_consumption` for `"Belgium"` and the another that holds rows for `"USA"`. Call these `belgium_consumption` and `usa_consumption`.
+
+-   Calculate the mean and median of kilograms of food consumed per person per year for both countries.
+
+```{r message=FALSE , warning=FALSE}
+# load the required libraries
+library(tidyverse)
+```
+
+```{r}
+# load the food consumption data set into a data frame
+food_consumption <- readRDS("food_consumption.rds")
+glimpse(food_consumption)
+```
+
+```{r}
+# create a data frame of "Belgium Food Consumption"
+belgium_consumption <- food_consumption %>% 
+    filter(country == "Belgium")
+
+head(belgium_consumption)
+```
+
+```{r}
+# create a data frame for us consumption
+us_consumption <- food_consumption %>%
+    filter(country == "USA")
+head(us_consumption)
+```
+
+```{r}
+# Calculate mean and median consumption in Belgium
+mean(belgium_consumption$consumption)
+median(belgium_consumption$consumption)
+```
+
+```{r}
+# Calculate mean and median consumption in USA
+mean(us_consumption$consumption)
+median(us_consumption$consumption)
+```
+
+**Exercise 2 :**
+
+When you want to compare summary statistics between groups, it's much easier to do a `group_by()` and one `summarize()` instead of filtering and calling the same functions multiple times.
+
+-   Filter `food_consumption` for rows with data about Belgium and the USA.
+
+-   Group the filtered data by `country`.
+
+-   Calculate the mean and median of the kilograms of food consumed per person per year in each country. Call these columns `mean_consumption` and `median_consumption`.
+
+```{r}
+food_consumption %>%
+    # Filter for Belgium and USA
+    filter(country %in% c("Belgium" , "USA")) %>%
+    # Group by country
+    group_by(country) %>%
+    # Get mean_consumption and median_consumption
+    summarize(mean_consumption   = mean(consumption) , 
+              median_consumption = median(consumption))
+```
+
+## 2 : Mean v/s Median
+
+We know that the mean is the sum of all the data points divided by the total number of data points, and the median is the middle value of the dataset where 50% of the data is less than the median, and 50% of the data is greater than the median. In this exercise, we will compare these two measures of center.
+
+Exercise 1 :
+
+-   Filter `food_consumption` to get the rows where `food_category` is `"rice"`.
+
+-   Create a histogram using `ggplot2` of `co2_emission` for rice.
+
+```{r}
+food_consumption %>%
+    # Filter for rice food category
+  filter(food_category == "rice") %>%
+  # Create histogram of co2_emission
+  ggplot(aes(co2_emission)) +
+    geom_histogram() +
+    labs(title = "Rice Cultivation CO2 Emission Distribution" , 
+         x = "CO2 emissions kg/person/year.")
+```
+
+**We observe that "CO2 Emissions" from "Rice Cultivation" is a "Right Skewed Distribution"**
+
+Exercise 2 :
+
+-   Filter `food_consumption` to get the rows where `food_category` is `"rice"`.
+
+-   Summarize the data to get the mean and median of `co2_emission`, calling them `mean_co2` and `median_co2`.
+
+```{r}
+food_consumption %>%
+    # Filter for rice food categor
+    filter(food_category == "rice") %>%
+    # Get mean_co2 and median_co2
+    summarise(mean_co2   = mean(co2_emission) , 
+              median_co2 = median(co2_emission))
+```
+
+The mean is substantially higher than the median since it's being pulled up by the high values over 100 kg/person/year.
+
+## 3: Quartiles, quantiles, and quintiles
+
+In the upcoming exercises, we will calculate quartiles, quintiles, and deciles, which split up a dataset into 4, 5, and 10 pieces, respectively.
+
+**Exercise 1 :**
+
+Calculate the quartiles of the `co2_emission` column of `food_consumption`
+
+```{r}
+# applying quantile method
+quantile(food_consumption$co2_emission)
+```
+
+Q1 : 5.21 ; Q2 : 16.53 ; Q3 : 62.59 , Min : 0 , Max : 1712
+
+**Exercise 2 :**
+
+Calculate the six quantiles that split up the data into 5 pieces (quintiles) of the `co2_emission` column of `food_consumption`. Hint : Result should have one number for each of these probabilities: `0`, `0.2`, `0.4`, `0.6`, `0.8`, and `1`.The `probs` argument of `quantile()`accepts a vector of probabilities
+
+```{r}
+# applying quantile and probs argument method for getting 6 quintiles
+quantile(food_consumption$co2_emission , probs = c(0, 0.2, 0.4, 0.6, 0.8,1))
+```
+
+**Exercise 3 :**
+
+Calculate the eleven quantiles of `co2_emission` that split up the data into ten pieces (deciles) Hint : The `seq()` function takes in a starting number, a stopping number, and the number to jump by, so the probabilities for quintiles would be `seq(0, 1, 0.2).seq(from "0", to"1", by"0.1")`
+
+```{r}
+# applying the seq() function
+quantile(food_consumption$co2_emission , probs = seq(0,1 , 0.1))
+```
+
+## 4: Variance and standard deviation
+
+**Exercise 1 :**
+
+-   Calculate the variance and standard deviation of `co2_emission` for each `food_category` by grouping by and summarizing variance as `var_co2` and standard deviation as `sd_co2`.
+
+-   Create a histogram of `co2_emission` for each `food_category` using `facet_wrap()`
+
+```{r}
+food_consumption %>%
+    # group data by food_category
+    group_by(food_category) %>%
+    # summarize variance and standard deviation
+    summarize(var_co2 = var(co2_emission) , 
+              sd_co2  = sd(co2_emission))
+```
+
+```{r}
+# Calculate variance and sd of co2_emission for each food_category
+food_consumption %>%
+    # group data by food_category
+    group_by(food_category) %>%
+    # summarize variance and standard deviation
+    summarize(var_co2 = var(co2_emission) , 
+              sd_co2  = sd(co2_emission))
+```
+
+```{r}
+# Create subgraphs for each food_category: histogram of co2_emission
+ggplot(data = food_consumption , 
+       mapping = aes(co2_emission)) +
+    geom_histogram() +
+    facet_wrap(~food_category)
+```
+
+**Beef has the biggest amount of variation in its CO emissions, while eggs, nuts, and soybeans have relatively small amounts of variation.**
+
+## 5: Finding outliers using IQR
+
+1.  Calculate the total `co2_emission` per country by grouping by country and taking the sum of `co2_emission`. Call the sum `total_emission` and store the resulting data frame as `emissions_by_country`
+
+```{r}
+emission_by_country <- food_consumption %>%
+    # group by country
+    group_by(country) %>%
+    # summarize total emissions
+    summarize(total_emmision = sum(co2_emission))
+
+emission_by_country
+```
+
+2.  Compute the first and third quartiles of `total_emission` and store these as `q1` and `q3`.
+
+```{r}
+# calculate the 1st quartile
+q1 <- quantile(emission_by_country$total_emmision , 0.25)
+q1
+# calculate the 3rd quartile
+q3 <- quantile(emission_by_country$total_emmision , 0.75)
+q3
+# calculate inter quartile range
+iqr <- q3 - q1
+iqr
+
+# calculate IQR with stats
+IQR(emission_by_country$total_emmision)
+```
+
+3.  Calculate the lower and upper cutoffs for outliers of `total_emission`, and store these as `lower` and `upper`.
+
+```{r}
+# calculate lower threshold (Q1-1.5*IQR)
+lower <- q1 - 1.5*iqr
+
+# calculate upper threshold (Q3+1.5*IQR)
+upper <- q3 + 1.5*iqr
+
+lower
+upper
+```
+
+4.  Use `filter()` to get countries with a `total_emission` greater than the `upper` cutoff **or** a `total_emission` less than the `lower` cutoff
+
+```{r}
+emission_by_country %>%
+    filter(total_emmision < lower | total_emmision > upper)
+```
+
+**Argentina has a substantially higher amount of CO2 emissions per person than other countries in the world.**
+
+```{r}
+ggplot(emission_by_country , aes(y = total_emmision)) +
+           geom_boxplot(outlier.color = "red")
+```
